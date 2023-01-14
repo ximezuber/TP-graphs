@@ -59,13 +59,15 @@ public class FileReader {
                    vertices.add(new Tuple2<>(id, node));
                    break;
                case "version":
-                   String author = (String) vertex.property("author").value();
-                   String sDate = (String) vertex.property("date").value();
-                   sDate = sDate.substring(0,sDate.length() - 4);
-                   LocalDateTime date = LocalDateTime.parse(sDate, DateTimeFormatter.ofPattern ( "yyyy-MM-dd HH:mm:ss"));
+                   // Excluding version node
 
-                   node = VertexProp.createVersion(code, date, author, desc);
-                   vertices.add(new Tuple2<>(id, node));
+//                   String author = (String) vertex.property("author").value();
+//                   String sDate = (String) vertex.property("date").value();
+//                   sDate = sDate.substring(0,sDate.length() - 4);
+//                   LocalDateTime date = LocalDateTime.parse(sDate, DateTimeFormatter.ofPattern ( "yyyy-MM-dd HH:mm:ss"));
+//
+//                   node = VertexProp.createVersion(code, date, author, desc);
+//                   vertices.add(new Tuple2<>(id, node));
                    break;
                case "country":
                    node = VertexProp.createCountry(code, desc);

@@ -119,7 +119,7 @@ public class VertexProp implements Serializable {
     @Override
     public String toString() {
         String string =  "VertexProp {";
-        if (type != null) string += ", type='" + type + '\'';
+        if (type != null) string += "type='" + type + '\'';
         if (code != null) string += ", code='" + code + '\'';
         if (icao != null) string += ", icao='" + icao + '\'';
         if (desc != null) string += ", desc='" + desc + '\'';

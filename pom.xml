@@ -38,21 +38,19 @@
         </plugins>
     </build>
     <dependencies>
-        <!--        &lt;!&ndash;-->
-        <!--         https://mvnrepository.com/artifact/org.apache.spark/spark-sql-->
-        <!--        &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.apache.spark</groupId>-->
-        <!--            <artifactId>spark-sql_2.12</artifactId>-->
-        <!--            <version>3.0.0</version>-->
-        <!--            <scope>provided</scope>-->
-        <!--        </dependency>-->
-        <!--
-         https://mvnrepository.com/artifact/graphframes/graphframes
-        -->
-        <!--
-         https://mvnrepository.com/artifact/graphframes/graphframes
-        -->
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.12</artifactId>
+            <version>3.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/graphframes/graphframes -->
+        <dependency>
+            <groupId>graphframes</groupId>
+            <artifactId>graphframes</artifactId>
+            <version>0.8.0-spark2.4-s_2.11</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.12</artifactId>

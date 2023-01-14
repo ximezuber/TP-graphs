@@ -18,6 +18,7 @@ public class EdgeProp implements Serializable {
     public static EdgeProp createContains(String label) {
         return new EdgeProp(label, null);
     }
+
     public String getLabel() {
         return label;
     }
