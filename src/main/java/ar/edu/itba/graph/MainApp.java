@@ -112,7 +112,7 @@ public class MainApp {
 
         //Create file base name for results
         final String baseName = "hdfs:///user/xzuberbuhler/final/results/" +
-                DateTimeFormatter.ofPattern("yyyy-MM-dd-HH:mm:ss").format(LocalDateTime.now());
+                DateTimeFormatter.ofPattern("yyyy-MM-dd-HHmmss").format(LocalDateTime.now());
 
         // Show and save results
         resultsB1.show();
