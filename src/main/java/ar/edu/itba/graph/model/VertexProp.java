@@ -45,11 +45,6 @@ public class VertexProp implements Serializable {
                 longest, elev, country, city, lat, lon, null, null);
     }
 
-    public static VertexProp createVersion(String code, LocalDateTime date, String author, String desc) {
-        return new VertexProp("version", code, null, desc, null, null, null,
-                null, null, null, null, null, author, date);
-    }
-
     public static VertexProp createCountry(String code, String desc) {
         return new VertexProp("country", code, null, desc, null,null, null,
                 null, null, null, null, null, null, null);

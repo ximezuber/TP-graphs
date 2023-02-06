@@ -10,8 +10,6 @@ import org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph;
 import scala.Tuple2;
 
 import java.io.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -19,7 +17,7 @@ import java.util.List;
 public class FileReader {
     private final List<Tuple2<Object, VertexProp>> vertices = new ArrayList<>();
     private final List<Edge<EdgeProp>> edges = new ArrayList<>();
-    private Graph graph = TinkerGraph.open();;
+    private final Graph graph = TinkerGraph.open();
 
     public FileReader() {}
 
@@ -32,8 +30,6 @@ public class FileReader {
        }
 
         Iterator<Vertex> vIterator = graph.vertices();
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
        while (vIterator.hasNext()) {
            Vertex vertex = vIterator.next();
@@ -57,17 +53,6 @@ public class FileReader {
                    node = VertexProp.createAirport(code, icao, desc, region, runways, longest, elev,
                            country, city, lat, lon);
                    vertices.add(new Tuple2<>(id, node));
-                   break;
-               case "version":
-                   // Excluding version node
-
-//                   String author = (String) vertex.property("author").value();
-//                   String sDate = (String) vertex.property("date").value();
-//                   sDate = sDate.substring(0,sDate.length() - 4);
-//                   LocalDateTime date = LocalDateTime.parse(sDate, DateTimeFormatter.ofPattern ( "yyyy-MM-dd HH:mm:ss"));
-//
-//                   node = VertexProp.createVersion(code, date, author, desc);
-//                   vertices.add(new Tuple2<>(id, node));
                    break;
                case "country":
                    node = VertexProp.createCountry(code, desc);

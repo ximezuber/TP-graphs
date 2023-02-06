@@ -1,0 +1,245 @@
+<?xml version='1.0' ?>
+<graphml xmlns='http://graphml.graphdrawing.org/xmlns'>
+    <key id='type'    for='node' attr.name='type'    attr.type='string'></key>
+    <key id='code'    for='node' attr.name='code'    attr.type='string'></key>
+    <key id='icao'    for='node' attr.name='icao'    attr.type='string'></key>
+    <key id='desc'    for='node' attr.name='desc'    attr.type='string'></key>
+    <key id='region'  for='node' attr.name='region'  attr.type='string'></key>
+    <key id='runways' for='node' attr.name='runways' attr.type='int'></key>
+    <key id='longest' for='node' attr.name='longest' attr.type='int'></key>
+    <key id='elev'    for='node' attr.name='elev'    attr.type='int'></key>
+    <key id='country' for='node' attr.name='country' attr.type='string'></key>
+    <key id='city'    for='node' attr.name='city'    attr.type='string'></key>
+    <key id='lat'     for='node' attr.name='lat'     attr.type='double'></key>
+    <key id='lon'     for='node' attr.name='lon'     attr.type='double'></key>
+    <key id='author'  for='node' attr.name='author'  attr.type='string'></key>
+    <key id='date'    for='node' attr.name='date'    attr.type='string'></key>
+    <key id='dist'    for='edge' attr.name='dist'    attr.type='int'></key>
+    <key id='labelV'  for='node' attr.name='labelV'  attr.type='string'></key>
+    <key id='labelE'  for='edge' attr.name='labelE'  attr.type='string'></key>
+
+    <graph id='routes' edgedefault='directed'>
+      <node id='0'>
+        <data key='type'>continent</data>
+        <data key='code'>EU</data>
+        <data key='desc'>Europe</data>
+        <data key='labelV'>continent</data>
+      </node>
+      <node id='1'>
+        <data key='type'>continent</data>
+        <data key='code'>SA</data>
+        <data key='desc'>South America</data>
+        <data key='labelV'>continent</data>
+      </node>
+      <node id='2'>
+        <data key='type'>continent</data>
+        <data key='code'>AS</data>
+        <data key='desc'>Asia</data>
+        <data key='labelV'>continent</data>
+      </node>
+
+      <node id='4'>
+        <data key='type'>country</data>
+        <data key='code'>CN</data>
+        <data key='desc'>China</data>
+        <data key='labelV'>country</data>
+      </node>
+      <node id='5'>
+        <data key='type'>country</data>
+        <data key='code'>JP</data>
+        <data key='desc'>Japan</data>
+        <data key='labelV'>country</data>
+      </node>
+      <node id='6'>
+        <data key='type'>country</data>
+        <data key='code'>IN</data>
+        <data key='desc'>India</data>
+        <data key='labelV'>country</data>
+      </node>
+      <node id='7'>
+        <data key='type'>country</data>
+        <data key='code'>AR</data>
+        <data key='desc'>Argentina</data>
+        <data key='labelV'>country</data>
+      </node>
+      <node id='8'>
+        <data key='type'>country</data>
+        <data key='code'>BR</data>
+        <data key='desc'>Brazil</data>
+        <data key='labelV'>country</data>
+      </node>
+      <node id='9'>
+        <data key='type'>country</data>
+        <data key='code'>CL</data>
+        <data key='desc'>Chile</data>
+        <data key='labelV'>country</data>
+      </node>
+      <node id='10'>
+        <data key='type'>country</data>
+        <data key='code'>ES</data>
+        <data key='desc'>Spain</data>
+        <data key='labelV'>country</data>
+      </node>
+      <node id='11'>
+        <data key='type'>country</data>
+        <data key='code'>IT</data>
+        <data key='desc'>Italy</data>
+        <data key='labelV'>country</data>
+      </node>
+        <node id='12'>
+        <data key='type'>country</data>
+        <data key='code'>DE</data>
+        <data key='desc'>Germany</data>
+        <data key='labelV'>country</data>
+      </node>
+      <node id='13'>
+        <data key='labelV'>airport</data>
+        <data key='type'>airport</data>
+        <data key='code'>PEK</data>
+        <data key='icao'>ZBAA</data>
+        <data key='city'>Beijing</data>
+        <data key='desc'>Beijing Capital International Airport</data>
+        <data key='region'>CN-11</data>
+        <data key='runways'>3</data>
+        <data key='longest'>12468</data>
+        <data key='elev'>116</data>
+        <data key='country'>CN</data>
+        <data key='lat'>40.0801010131836</data>
+        <data key='lon'>116.584999084473</data>
+      </node>
+      <node id='14'>
+        <data key='labelV'>airport</data>
+        <data key='type'>airport</data>
+        <data key='code'>PVG</data>
+        <data key='icao'>ZSPD</data>
+        <data key='city'>Shanghai</data>
+        <data key='desc'>Shanghai - Pudong International Airport</data>
+        <data key='region'>CN-31</data>
+        <data key='runways'>2</data>
+        <data key='longest'>13123</data>
+        <data key='elev'>13</data>
+        <data key='country'>CN</data>
+        <data key='lat'>31.1434001922607</data>
+        <data key='lon'>121.805000305176</data>
+      </node>
+      <node id='15'>
+        <data key='labelV'>airport</data>
+        <data key='type'>airport</data>
+        <data key='code'>CAN</data>
+        <data key='icao'>ZGGG</data>
+        <data key='city'>Guangzhou</data>
+        <data key='desc'>Guangzhou Baiyun International Airport</data>
+        <data key='region'>CN-44</data>
+        <data key='runways'>2</data>
+        <data key='longest'>12467</data>
+        <data key='elev'>50</data>
+        <data key='country'>CN</data>
+        <data key='lat'>23.3924007415771</data>
+        <data key='lon'>113.299003601074</data>
+      </node>
+      <node id='16'>
+        <data key='labelV'>airport</data>
+        <data key='type'>airport</data>
+        <data key='code'>ITM</data>
+        <data key='icao'>RJOO</data>
+        <data key='city'>Osaka</data>
+        <data key='desc'>Osaka International Airport</data>
+        <data key='region'>JP-27</data>
+        <data key='runways'>2</data>
+        <data key='longest'>9840</data>
+        <data key='elev'>50</data>
+        <data key='country'>JP</data>
+        <data key='lat'>34.7854995727539</data>
+        <data key='lon'>135.438003540039</data>
+      </node>
+      <node id='17'>
+        <data key='labelV'>airport</data>
+        <data key='type'>airport</data>
+        <data key='code'>EZE</data>
+        <data key='icao'>SAEZ</data>
+        <data key='city'>Buenos Aires</data>
+        <data key='desc'>Buenos Aires, Ministro Pistarini International Airport</data>
+        <data key='region'>AR-B</data>
+        <data key='runways'>2</data>
+        <data key='longest'>10187</data>
+        <data key='elev'>67</data>
+        <data key='country'>AR</data>
+        <data key='lat'>-34.8222</data>
+        <data key='lon'>-58.5358</data>
+      </node>
+      <node id='18'>
+        <data key='labelV'>airport</data>
+        <data key='type'>airport</data>
+        <data key='code'>AEP</data>
+        <data key='icao'>SABE</data>
+        <data key='city'>Buenos Aires</data>
+        <data key='desc'>Jorge Newbery Airpark</data>
+        <data key='region'>AR-C</data>
+        <data key='runways'>1</data>
+        <data key='longest'>6890</data>
+        <data key='elev'>18</data>
+        <data key='country'>AR</data>
+        <data key='lat'>-34.5592</data>
+        <data key='lon'>-58.4156</data>
+      </node>
+      <node id='19'>
+        <data key='labelV'>airport</data>
+        <data key='type'>airport</data>
+        <data key='code'>BSB</data>
+        <data key='icao'>SBBR</data>
+        <data key='city'>Brasília</data>
+        <data key='desc'>Presidente Juscelino Kubistschek International Airport</data>
+        <data key='region'>BR-DF</data>
+        <data key='runways'>2</data>
+        <data key='longest'>10827</data>
+        <data key='elev'>3497</data>
+        <data key='country'>BR</data>
+        <data key='lat'>-15.8691673278809</data>
+        <data key='lon'>-47.9208335876465</data>
+      </node>
+
+      <edge id='20' source='4' target='13'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='21' source='4' target='14'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='22' source='4' target='15'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='23' source='5' target='16'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='24' source='2' target='13'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='25' source='2' target='14'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='26' source='2' target='15'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='27' source='2' target='16'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='28' source='7' target='17'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='29' source='7' target='18'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='30' source='8' target='19'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='31' source='1' target='17'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='32' source='1' target='18'>
+        <data key='labelE'>contains</data>
+      </edge>
+      <edge id='33' source='1' target='19'>
+        <data key='labelE'>contains</data>
+      </edge>
+
+    </graph>
+</graphml>

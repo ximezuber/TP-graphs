@@ -19,7 +19,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 import static org.apache.spark.sql.functions.*;
@@ -27,7 +26,7 @@ import static org.apache.spark.sql.functions.*;
 public class MainApp {
 
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         SparkConf spark = new SparkConf().setAppName("TP Final");
         JavaSparkContext sparkContext = new JavaSparkContext(spark);
 
@@ -76,38 +75,38 @@ public class MainApp {
                 .filterEdges("label = 'route'")
                 .filterVertices("type = 'airport'")
                 .find("(a)-[e]->(b)")
-                .filter("b.code = 'SEA'")
                 .filter("a.lat < 0")
                 .filter("a.lon < 0")
+                .filter("b.code = 'SEA'")
                 .select(col("a.code").as("Airport"),
                         concat(col("a.code"), lit("-"), col("b.code")).as("Route"));
 
         Dataset<Row> oneStopFlightSEA = airRoutesGraph
                 .filterEdges("label = 'route'")
                 .filterVertices("type = 'airport'")
-                .find("(a)-[e]->(b); (b)-[e2]->(c)")
-                .filter("c.code = 'SEA'")
+                .find("(a)-[e]->(c); (c)-[d]->(b)")
                 .filter("a.lat < 0")
                 .filter("a.lon < 0")
+                .filter("b.code = 'SEA'")
                 .select(col("a.code").as("Airport"),
                         concat(col("a.code"), lit("-"),
-                                col("b.code"), lit("-"),
-                                col("c.code")).as("Route"));
+                                col("c.code"), lit("-"),
+                                col("b.code")).as("Route"));
 
         Dataset<Row> resultsB1 = directFlightsSEA.union(oneStopFlightSEA);
 
         // Query b2
         Dataset<Row> resultsB2 = airRoutesGraph
-                .find("(a)-[e]->(b); (c)-[e2]->(b)")
+                .find("(a)-[e]->(b); (c)-[d]->(b)")
                 .filter("a.type = 'continent'")
-                .filter("c.type = 'country'")
                 .filter("b.type = 'airport'")
+                .filter("c.type = 'country'")
                 .select(col("a.desc").as("Continent"),
                         concat(col("c.code"), lit("("),
                                 col("c.desc"), lit(")")).as("Country"),
                         col("b.elev").cast("String").as("elev"))
                 .groupBy("Continent", "Country")
-                .agg(sort_array(collect_list(col("elev"))).alias("Airport elevations"))
+                .agg(collect_list(col("elev")).alias("Airport elevations"))
                 .orderBy("Continent", "Country");
 
         //Create file base name for results
